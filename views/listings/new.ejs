@@ -1,0 +1,81 @@
+<% layout('layouts/boilerplate') %>
+
+
+<div class="row ">
+    <div class="col-8 offset-2">
+        <br><br>
+        <h3>Create a New Listing</h3>
+        <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+
+
+            <div class="mb-3">
+                <label for="title" class="form-label" >Title</label>
+                <input type="text" name="listing[title]" placeholder="Add a catchy title" class="form-control">
+
+            </div>
+                
+
+            <div class="mb-3">
+                <label for="description" class="form-label" >Description</label>
+                <textarea name="listing[description]"  placeholder="Enter description" class="form-control"></textarea>
+
+            </div>
+
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select name="listing[category]" class="form-select" required>
+                    <option disabled selected value="">-- Select a Category --</option>
+                    <option value="mountains">Mountains</option>
+                    <option value="farms">Farms</option>
+                    <option value="trending">Trending</option>
+                    <option value="iconic Cities">Iconic Cities</option>
+                    <option value="castle">Castle</option>
+                    <option value="amazing pool">Amazing Pool</option>
+                    <option value="camping">Camping</option>
+                    <option value="arctic">Arctic</option>
+                </select>
+            </div>
+
+            
+            
+
+            <div class="mb-3">
+
+                <label for="image" class="form-label" >Upload Listing Image</label>
+                <input type="file" name="listing[image]" class="form-control">
+                required 
+            </div>
+        
+            <div class="row">
+                <div class="mb-3 col-md-4">
+
+                <label for="price" class="form-label" >Price</label>
+                <input type="number" name="listing[price]" placeholder="1200" class="form-control">
+                </div>
+
+
+                <div class="mb-3 col-md-8">
+                <label for="country" class="form-label" >Country</label>
+                <input type="text" name="listing[country]" placeholder="India" class="form-control">
+                
+                </div>
+            </div>
+            
+
+            
+            
+            
+            <div class="mb-3">
+                <label for="location" class="form-label" >Location</label>
+                <input type="text" name="listing[location]" placeholder="Jaipur,Rajasthan" class="form-control">
+            </div>
+            
+            
+            
+            
+            <button class="btn btn-dark add-btn mt-3">Add</button>
+            <br><br>
+        </form>
+    </div>
+</div>
+
